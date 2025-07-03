@@ -22,11 +22,10 @@ Long description of module's purpose
 
     # always loaded
     'data': [
-         'security/security.xml',
          'security/ir.model.access.csv',
 
         'views/sale_order_view.xml',
-        'views/sale_source_view.xml',
+
     ],
    'installable': True,
 }
