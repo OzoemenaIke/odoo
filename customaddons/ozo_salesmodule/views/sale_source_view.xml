@@ -1,0 +1,36 @@
+<odoo>
+
+  <record id="view_sales_sources" model="ir.ui.view">
+    <field name="name">sale.source.tree</field>
+<!-- The tree will be defined later! looks like u can go into fields using .    -->
+    <field name="model">sale.source</field> <!-- get the model u defined in models.py-->
+    <field name="arch" type="xml">
+      <tree>
+        <field name="name"/>
+      </tree>
+    </field>
+  </record>
+    <record id="view_sales_sources_form" model="ir.ui.view">
+    <field name="name">sale.source.form</field>
+    <field name="model">sale.source</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group>
+            <field name="name"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+  <menuitem id="menu_sale_source"
+            parent="sale.menu_sale_config"
+            name="Sources"
+            sequence="10"/>
+  <action id="action_sale_source"
+          name="Sources"
+          res_model="sale.source"
+          view_mode="tree,form"
+          menu_id="menu_sale_source" />
+
+</odoo>

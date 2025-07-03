@@ -1,0 +1,14 @@
+<odoo>
+<record id="view_order_from_inherit_source" model="ir.ui.view">
+    <field name="name">sale.order.form.source</field>
+    <field name="model">sale.order</field>
+    <field name="inherit_id" ref="sale.view_order_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//sheet/notebook/page[@string='Other Information']" position="inside">
+          <group>
+              <field name="source_id" options="{'no_create': True}"/>
+          </group>
+      </xpath>
+    </field>
+  </record>
+</odoo>
