@@ -7,7 +7,6 @@
     'description': """
 Long description of module's purpose
     """,
-
     'author': "My Company",
     'website': "https://www.yourcompany.com",
 
